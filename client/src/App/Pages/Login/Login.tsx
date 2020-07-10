@@ -5,9 +5,9 @@ import { Redirect, useLocation } from 'react-router-dom';
 import type { ConnectedProps } from 'react-redux';
 import type { Location } from 'history';
 
-import { RootStore } from 'App/Store/Store';
-import { UserAction, loginRequest } from 'App/Store/Actions';
-import { isLoggedIn } from 'App/Store/Selectors';
+import { RootState } from 'App/Store/Store';
+import { loginRequest } from 'App/Store/User/Actions';
+import { isLoggedIn } from 'App/Store/User/Selectors';
 
 import icon_user from 'App/Icons/user.svg';
 import icon_pass from 'App/Icons/pass.svg';
@@ -15,11 +15,11 @@ import icon_next from 'App/Icons/next.svg';
 
 import styles from './Login.module.css';
 
-const mapStateToProps = (state: RootStore) => {
+const mapStateToProps = (state: RootState) => {
 	return { isLoggedIn: isLoggedIn(state) };
 }
 
-const mapDispatchToProps = (dispatch: Dispatch<UserAction>) => {
+const mapDispatchToProps = (dispatch: Dispatch) => {
 	return bindActionCreators({ loginRequest }, dispatch)
 }
 

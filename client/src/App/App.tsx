@@ -5,7 +5,6 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 import Navigation from './Components/Navigation/Navigation'
 import PrivateRoute from './Components/PrivateRoute';
 import Info from './Pages/Info/Info';
-import Users from './Pages/Users/Users';
 import NotFound from './Pages/NotFound/NotFound';
 import Home from './Pages/Home/Home';
 import Login from './Pages/Login/Login';
@@ -37,9 +36,6 @@ function App() {
                             </Route>
                             <PrivateRoute exact path="/">
                                 <Home />
-                            </PrivateRoute>
-                            <PrivateRoute path="/users">
-                                <Users />
                             </PrivateRoute>
                             <Route path="/info">
                                 <Info />

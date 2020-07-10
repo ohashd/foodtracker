@@ -4,10 +4,10 @@ import { connect } from 'react-redux';
 import type { RouteProps } from 'react-router';
 import type { ConnectedProps } from 'react-redux';
 
-import { RootStore } from 'App/Store/Store';
-import { isLoggedIn } from 'App/Store/Selectors';
+import { RootState } from 'App/Store/Store';
+import { isLoggedIn } from 'App/Store/User/Selectors';
 
-const mapStateToProps = (state: RootStore) => {
+const mapStateToProps = (state: RootState) => {
     return {
         isLoggedIn: isLoggedIn(state)
     }

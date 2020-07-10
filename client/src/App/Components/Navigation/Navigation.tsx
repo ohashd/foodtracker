@@ -9,10 +9,10 @@ import info from 'App/Icons/info.svg';
 import padlock from 'App/Icons/padlock.svg';
 import register from 'App/Icons/register.svg';
 
-import { RootStore } from 'App/Store/Store';
-import { isLoggedIn } from 'App/Store/Selectors';
+import { RootState } from 'App/Store/Store';
+import { isLoggedIn } from 'App/Store/User/Selectors';
 
-const mapStateToProps = (state: RootStore) => {
+const mapStateToProps = (state: RootState) => {
 	return {
 		isLoggedIn: isLoggedIn(state)
 	}
