@@ -1,0 +1,22 @@
+.Navigation {
+	display: flex;
+	justify-content: center;
+	padding: 1rem;
+	align-content: center;
+}
+
+.Navigation > * {
+	width: 2.5em;
+	height: 2.5em;
+	margin: 1em;
+	opacity: 0.5;
+}
+
+.Navigation img {
+	width: 100%;
+	height: 100%;
+}
+
+.active {
+	opacity: 1.0;
+}
